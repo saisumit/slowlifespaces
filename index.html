@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slowlifespaces - Premium Coffee Experience</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Lora:wght@400;500;600&display=swap');
+
+        :root {
+            --color-white: #FFFFFF;
+            --color-cream: #FAF7F2;
+            --color-beige: #F2EBE3;
+            --color-light-brown: #E6DACA;
+            --color-medium-brown: #8B7355;
+            --color-dark-brown: #594A3C;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            background-color: var(--color-cream);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hover-lift {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px);
+        }
+
+        .scroll-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+
+        .scroll-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .bean-bg {
+            background-color: var(--color-beige);
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0C13.432 0 0 13.432 0 30c0 16.568 13.432 30 30 30s30-13.432 30-30C60 13.432 46.568 0 30 0zm0 45c-8.284 0-15-6.716-15-15 0-8.284 6.716-15 15-15 8.284 0 15 6.716 15 15 0 8.284-6.716 15-15 15z' fill='%23d4c3a3' fill-opacity='0.2'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="fixed w-full bg-opacity-95 backdrop-blur-sm z-50" style="background: white !important;">
+    <div class="max-w-6xl mx-auto px-4 py-4" style="background-color:white">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <a href="#" class="text-2xl mb-4 md:mb-0" style="color: var(--color-dark-brown)">slowlifespaces</a>
+            <div class="space-x-4 md:space-x-8">
+                <a href="#about" style="color: var(--color-medium-brown)" class="hover:text-dark-brown">Story</a>
+                <a href="#coffee" style="color: var(--color-medium-brown)" class="hover:text-dark-brown">Coffee</a>
+                <a href="#experience" style="color: var(--color-medium-brown)" class="hover:text-dark-brown">Experience</a>
+                <a href="#visit" style="color: var(--color-medium-brown)" class="hover:text-dark-brown">Visit</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="min-h-screen flex items-center justify-center bean-bg">
+    <div class="text-center fade-in px-4">
+        <h1 class="text-4xl md:text-7xl mb-6" style="color: var(--color-dark-brown)">where time slows down</h1>
+        <p class="text-xl md:text-2xl max-w-xl mx-auto" style="color: var(--color-medium-brown)">Experience the world's finest coffee beans in our mindfully crafted space</p>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 scroll-section" style="background-color: var(--color-beige)">
+    <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl mb-12 text-center" style="color: var(--color-dark-brown)">our story</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="text-center hover-lift p-6" style="background-color: white">
+                <h3 class="text-xl mb-4" style="color: var(--color-dark-brown)">sourcing</h3>
+                <p style="color: var(--color-medium-brown)">Carefully selected beans from the world's most prestigious estates</p>
+            </div>
+            <div class="text-center hover-lift p-6" style="background-color: white">
+                <h3 class="text-xl mb-4" style="color: var(--color-dark-brown)">craft</h3>
+                <p style="color: var(--color-medium-brown)">Masterful roasting that brings out each bean's unique character</p>
+            </div>
+            <div class="text-center hover-lift p-6" style="background-color: white">
+                <h3 class="text-xl mb-4" style="color: var(--color-dark-brown)">service</h3>
+                <p style="color: var(--color-medium-brown)">Expertly prepared by baristas who honor the art of coffee</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Coffee Section -->
+<section id="coffee" class="py-20 scroll-section" style="background-color:white">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl mb-12 text-center" style="color: var(--color-dark-brown)">our coffee</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="p-8 hover-lift" style="background-color: var(--color-beige)">
+                <img src="/bg1.webp" alt="Single Origin Coffee" class="w-full h-64 object-cover mb-6">
+                <h3 class="text-xl mb-4" style="color: var(--color-dark-brown)">single origin</h3>
+                <p style="color: var(--color-medium-brown)">Exceptional beans from the world's finest coffee regions</p>
+            </div>
+            <div class="p-8 hover-lift" style="background-color: var(--color-beige)">
+                <img src="/bg2.webp" alt="Signature Blends" class="w-full h-64 object-cover mb-6">
+                <h3 class="text-xl mb-4" style="color: var(--color-dark-brown)">signature blends</h3>
+                <p style="color: var(--color-medium-brown)">Artfully crafted combinations for unique flavor profiles</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="py-20 scroll-section" style="background-color: var(--color-beige)">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+        <h2 class="text-3xl mb-12" style="color: var(--color-dark-brown)">the experience</h2>
+        <p class="text-xl leading-relaxed" style="color: var(--color-medium-brown)">
+            Each visit to slowlifespaces is an invitation to pause and savor. Our space is designed for those who appreciate the subtle complexities of exceptional coffee and seek moments of tranquility in their day.
+        </p>
+    </div>
+</section>
+
+<!-- Visit Section -->
+<section id="visit" class="py-20 scroll-section" style="background-color: var(--color-cream)">
+    <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl mb-12 text-center" style="color: var(--color-dark-brown)">visit us</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-xl mb-2" style="color: var(--color-dark-brown)">hours</h3>
+                    <p style="color: var(--color-medium-brown)">Monday - Friday: 10am - 10pm<br>
+                        Saturday - Sunday: 10am - 10pm</p>
+                </div>
+                <div>
+                    <h3 class="text-xl mb-2" style="color: var(--color-dark-brown)">location</h3>
+                    <p style="color: var(--color-medium-brown)">One Horizon<br>
+                        Gurgaon, Opp. DLF Camelias</p>
+                </div>
+                <div>
+                    <h3 class="text-xl mb-2" style="color: var(--color-dark-brown)">contact</h3>
+                    <p style="color: var(--color-medium-brown)">hello@slowlifespaces.com<br>
+                        +91-8800819496</p>
+                </div>
+            </div>
+            <form class="space-y-6">
+                <div>
+                    <input type="text" placeholder="Name" class="w-full p-4 border rounded" style="background-color: var(--color-beige); border-color: var(--color-light-brown)">
+                </div>
+                <div>
+                    <input type="email" placeholder="Email" class="w-full p-4 border rounded" style="background-color: var(--color-beige); border-color: var(--color-light-brown)">
+                </div>
+                <div>
+                    <textarea placeholder="Message" rows="4" class="w-full p-4 border rounded" style="background-color: var(--color-beige); border-color: var(--color-light-brown)"></textarea>
+                </div>
+                <button type="submit" class="w-full py-4 rounded transition-colors" style="background-color: var(--color-dark-brown); color: var(--color-cream)">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-12" style="background-color: var(--color-beige)">
+    <div class="max-w-6xl mx-auto px-4 text-center" style="color: var(--color-medium-brown)">
+        <p>&copy; 2025 slowlifespaces. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Scroll animation for sections
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.scroll-section').forEach((section) => {
+        observer.observe(section);
+    });
+</script>
+</body>
+</html>
